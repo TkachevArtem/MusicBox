@@ -15,6 +15,7 @@
 		AC671A2E2BBDBF23001E2F88 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AC671A2D2BBDBF23001E2F88 /* Base */; };
 		AC671A362BBDC01B001E2F88 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC671A352BBDC01B001E2F88 /* MainTabBarController.swift */; };
 		AC671A382BBDC0D4001E2F88 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC671A372BBDC0D4001E2F88 /* SearchViewController.swift */; };
+		AC68D5CD2BBF250500F202E5 /* TrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68D5CC2BBF250500F202E5 /* TrackModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AC671A2F2BBDBF23001E2F88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC671A352BBDC01B001E2F88 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		AC671A372BBDC0D4001E2F88 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		AC68D5CC2BBF250500F202E5 /* TrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				AC671A252BBDBF22001E2F88 /* ViewController.swift */,
 				AC671A352BBDC01B001E2F88 /* MainTabBarController.swift */,
 				AC671A372BBDC0D4001E2F88 /* SearchViewController.swift */,
+				AC68D5CC2BBF250500F202E5 /* TrackModel.swift */,
 				AC671A272BBDBF22001E2F88 /* Main.storyboard */,
 				AC671A2A2BBDBF23001E2F88 /* Assets.xcassets */,
 				AC671A2C2BBDBF23001E2F88 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC671A382BBDC0D4001E2F88 /* SearchViewController.swift in Sources */,
+				AC68D5CD2BBF250500F202E5 /* TrackModel.swift in Sources */,
 				AC671A262BBDBF22001E2F88 /* ViewController.swift in Sources */,
 				AC671A222BBDBF22001E2F88 /* AppDelegate.swift in Sources */,
 				AC671A362BBDC01B001E2F88 /* MainTabBarController.swift in Sources */,
