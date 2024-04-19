@@ -17,6 +17,7 @@
 		AC671A362BBDC01B001E2F88 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC671A352BBDC01B001E2F88 /* MainTabBarController.swift */; };
 		AC671A382BBDC0D4001E2F88 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC671A372BBDC0D4001E2F88 /* SearchViewController.swift */; };
 		AC68D5CD2BBF250500F202E5 /* TrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68D5CC2BBF250500F202E5 /* TrackModel.swift */; };
+		AC89D2C32BD30CA600E93075 /* SearchResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC89D2C22BD30CA600E93075 /* SearchResponce.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		AC671A352BBDC01B001E2F88 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		AC671A372BBDC0D4001E2F88 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		AC68D5CC2BBF250500F202E5 /* TrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackModel.swift; sourceTree = "<group>"; };
+		AC89D2C22BD30CA600E93075 /* SearchResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponce.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				AC671A352BBDC01B001E2F88 /* MainTabBarController.swift */,
 				AC671A372BBDC0D4001E2F88 /* SearchViewController.swift */,
 				AC68D5CC2BBF250500F202E5 /* TrackModel.swift */,
+				AC89D2C22BD30CA600E93075 /* SearchResponce.swift */,
 				AC671A272BBDBF22001E2F88 /* Main.storyboard */,
 				AC671A2A2BBDBF23001E2F88 /* Assets.xcassets */,
 				AC671A2C2BBDBF23001E2F88 /* LaunchScreen.storyboard */,
@@ -221,6 +224,7 @@
 				AC671A222BBDBF22001E2F88 /* AppDelegate.swift in Sources */,
 				AC671A362BBDC01B001E2F88 /* MainTabBarController.swift in Sources */,
 				AC671A242BBDBF22001E2F88 /* SceneDelegate.swift in Sources */,
+				AC89D2C32BD30CA600E93075 /* SearchResponce.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

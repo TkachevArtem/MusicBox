@@ -10,6 +10,8 @@ import Alamofire
 
 class SearchViewController: UITableViewController {
     
+    private var timer: Timer?
+    
     var tracksArray = [TrackModel(trackName: "1", artistName: "A"), TrackModel(trackName: "2", artistName: "B"), TrackModel(trackName: "3", artistName: "C")]
     
     let searchController = UISearchController(searchResultsController: nil)
@@ -49,19 +51,32 @@ extension SearchViewController {
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        let url = "https://itunes.apple.com/search?term=\(searchText)"
-        
-        AF.request(url).response { (dataResponse) in
+        timer?.invalidate()
+        timer = Timer(timeInterval: 0.3, repeats: false, block: { (_) in
+            let url = "https://itunes.apple.com/search?term=\(searchText)"
             
-            if let error = dataResponse.error {
-                print("Data response error: \(error.localizedDescription)")
-                return
+            AF.request(url).response { (dataResponse) in
+                
+                if let error = dataResponse.error {
+                    print("Data response error: \(error.localizedDescription)")
+                    return
+                }
+                
+                guard let data = dataResponse.data else { return }
+                
+                let decoder = JSONDecoder()
+                
+                do {
+                    let objects = try decoder.decode(SearchResponce.self, from: data)
+                    print(objects)
+                    
+                } catch let JSONError {
+                   print(JSONError)
+                }
+                
+                let dataString = String(data: data, encoding: .utf8)
+                print(dataString ?? "")
             }
-            
-            guard let data = dataResponse.data else { return }
-            let dataString = String(data: data, encoding: .utf8)
-            print(dataString)
-        }
-        
+        })
     }
 }
