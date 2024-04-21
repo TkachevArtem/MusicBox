@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B0286AB604D030FEF43EFDE /* Pods_MusicBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA429DDA9AA6FE33E14931E /* Pods_MusicBox.framework */; };
+		AC52DC782BD5AADA00E0030F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52DC772BD5AADA00E0030F /* NetworkService.swift */; };
 		AC671A222BBDBF22001E2F88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC671A212BBDBF22001E2F88 /* AppDelegate.swift */; };
 		AC671A242BBDBF22001E2F88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC671A232BBDBF22001E2F88 /* SceneDelegate.swift */; };
 		AC671A262BBDBF22001E2F88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC671A252BBDBF22001E2F88 /* ViewController.swift */; };
@@ -16,7 +17,6 @@
 		AC671A2E2BBDBF23001E2F88 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AC671A2D2BBDBF23001E2F88 /* Base */; };
 		AC671A362BBDC01B001E2F88 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC671A352BBDC01B001E2F88 /* MainTabBarController.swift */; };
 		AC671A382BBDC0D4001E2F88 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC671A372BBDC0D4001E2F88 /* SearchViewController.swift */; };
-		AC68D5CD2BBF250500F202E5 /* TrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68D5CC2BBF250500F202E5 /* TrackModel.swift */; };
 		AC89D2C32BD30CA600E93075 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC89D2C22BD30CA600E93075 /* SearchResponse.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +24,7 @@
 		0AA429DDA9AA6FE33E14931E /* Pods_MusicBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D70129597C0AD3CC2EF629E /* Pods-MusicBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicBox.release.xcconfig"; path = "Target Support Files/Pods-MusicBox/Pods-MusicBox.release.xcconfig"; sourceTree = "<group>"; };
 		24D9E9A52A4AEAB326B613EC /* Pods-MusicBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicBox.debug.xcconfig"; path = "Target Support Files/Pods-MusicBox/Pods-MusicBox.debug.xcconfig"; sourceTree = "<group>"; };
+		AC52DC772BD5AADA00E0030F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		AC671A1E2BBDBF22001E2F88 /* MusicBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC671A212BBDBF22001E2F88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC671A232BBDBF22001E2F88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 		AC671A2F2BBDBF23001E2F88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC671A352BBDC01B001E2F88 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		AC671A372BBDC0D4001E2F88 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		AC68D5CC2BBF250500F202E5 /* TrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackModel.swift; sourceTree = "<group>"; };
 		AC89D2C22BD30CA600E93075 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,7 +93,7 @@
 				AC671A252BBDBF22001E2F88 /* ViewController.swift */,
 				AC671A352BBDC01B001E2F88 /* MainTabBarController.swift */,
 				AC671A372BBDC0D4001E2F88 /* SearchViewController.swift */,
-				AC68D5CC2BBF250500F202E5 /* TrackModel.swift */,
+				AC52DC772BD5AADA00E0030F /* NetworkService.swift */,
 				AC89D2C22BD30CA600E93075 /* SearchResponse.swift */,
 				AC671A272BBDBF22001E2F88 /* Main.storyboard */,
 				AC671A2A2BBDBF23001E2F88 /* Assets.xcassets */,
@@ -219,7 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC671A382BBDC0D4001E2F88 /* SearchViewController.swift in Sources */,
-				AC68D5CD2BBF250500F202E5 /* TrackModel.swift in Sources */,
+				AC52DC782BD5AADA00E0030F /* NetworkService.swift in Sources */,
 				AC671A262BBDBF22001E2F88 /* ViewController.swift in Sources */,
 				AC671A222BBDBF22001E2F88 /* AppDelegate.swift in Sources */,
 				AC671A362BBDC01B001E2F88 /* MainTabBarController.swift in Sources */,
