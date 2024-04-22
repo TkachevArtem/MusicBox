@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 
-class SearchViewController: UITableViewController {
+class SearchMusicViewController: UITableViewController {
     
     let networkService = NetworkService()
     private var timer: Timer?
@@ -33,7 +33,7 @@ class SearchViewController: UITableViewController {
     }
 }
 
-extension SearchViewController {
+extension SearchMusicViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tracksArray.count
@@ -49,7 +49,7 @@ extension SearchViewController {
     }
 }
 
-extension SearchViewController: UISearchBarDelegate {
+extension SearchMusicViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         timer?.invalidate()

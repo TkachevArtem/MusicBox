@@ -13,7 +13,7 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         
         viewControllers = [
-            generateVC(rootViewController: SearchViewController(), image: UIImage(systemName: "magnifyingglass"), title: "Search"),
+            generateVC(rootViewController: SearchMusicViewController(), image: UIImage(systemName: "magnifyingglass"), title: "Search"),
             generateVC(rootViewController: ViewController(), image: UIImage(systemName: "music.note.list"), title: "Library")
         ]
     }
