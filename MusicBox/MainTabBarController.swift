@@ -12,8 +12,10 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let searchViewController: SearchViewController = SearchViewController.loadFromStoryboard()
+        
         viewControllers = [
-            generateVC(rootViewController: SearchMusicViewController(), image: UIImage(systemName: "magnifyingglass"), title: "Search"),
+            generateVC(rootViewController: searchViewController, image: UIImage(systemName: "magnifyingglass"), title: "Search"),
             generateVC(rootViewController: ViewController(), image: UIImage(systemName: "music.note.list"), title: "Library")
         ]
     }
