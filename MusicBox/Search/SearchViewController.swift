@@ -19,7 +19,8 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     @IBOutlet weak var table: UITableView!
     
     let searchController = UISearchController(searchResultsController: nil)
-    
+    private var searchViewModel = SearchViewModel.init(cells: [])
+    private var timer: Timer?
     
     // MARK: Setup
     
@@ -64,8 +65,9 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         switch viewModel {
         case .some:
             print("viewController .some")
-        case .displayTracks:
+        case .displayTracks(let searchViewModel):
             print("viewController .displayTracks")
+            self.searchViewModel = searchViewModel
         }
     }
     
@@ -74,19 +76,28 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        return searchViewModel.cells.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellID", for: indexPath)
-        cell.textLabel?.text = "indexPath \(indexPath)"
+        
+        let cellViewModel = searchViewModel.cells[indexPath.row]
+        cell.textLabel?.numberOfLines = 2
+        cell.textLabel?.text = "\(cellViewModel.artistName)\n\(cellViewModel.trackName)"
+        cell.imageView?.image = UIImage(systemName: "music.note")
         return cell
     }
 }
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
-        interactor?.makeRequest(request: Search.Model.Request.RequestType.getTracks)
+        
+        
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (_) in
+            self.interactor?.makeRequest(request: Search.Model.Request.RequestType.getTracks(searchTerm: searchText))
+            print(searchText)
+        })
     }
 }
