@@ -68,6 +68,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         case .displayTracks(let searchViewModel):
             print("viewController .displayTracks")
             self.searchViewModel = searchViewModel
+            self.table.reloadData()
         }
     }
     
@@ -76,13 +77,13 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchViewModel.cells.count
+        return self.searchViewModel.cells.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellID", for: indexPath)
         
-        let cellViewModel = searchViewModel.cells[indexPath.row]
+        let cellViewModel = self.searchViewModel.cells[indexPath.row]
         cell.textLabel?.numberOfLines = 2
         cell.textLabel?.text = "\(cellViewModel.artistName)\n\(cellViewModel.trackName)"
         cell.imageView?.image = UIImage(systemName: "music.note")
