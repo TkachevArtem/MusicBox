@@ -51,7 +51,10 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     }
     
     private func setupTableView() {
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "CellID")
+        //table.register(UITableViewCell.self, forCellReuseIdentifier: "CellID")
+        
+        let nib = UINib(nibName: "TrackCell", bundle: nil)
+        table.register(nib, forCellReuseIdentifier: TrackCell.reuseID)
     }
     
     private func setupSearchBar() {
@@ -74,6 +77,8 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     
 }
 
+// MARK: TableView
+
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -81,13 +86,17 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellID", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: TrackCell.reuseID, for: indexPath) as! TrackCell
         
         let cellViewModel = self.searchViewModel.cells[indexPath.row]
-        cell.textLabel?.numberOfLines = 2
-        cell.textLabel?.text = "\(cellViewModel.artistName)\n\(cellViewModel.trackName)"
-        cell.imageView?.image = UIImage(systemName: "music.note")
+        print("cellViewModel.previewUrl:", cellViewModel.previewUrl)
+        cell.trackImageView.backgroundColor = .systemBlue
+
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        84
     }
 }
 
