@@ -33,7 +33,7 @@ class SearchPresenter: SearchPresentationLogic {
     
     private func cellViewModel(from track: Track) -> SearchViewModel.Cell {
         
-        return SearchViewModel.Cell.init(iconURLString: track.artworkUrl100, artistName: track.artistName, trackName: track.trackName, collectionName: track.collectionName, previewUrl: track.previewUrl)
+        return SearchViewModel.Cell.init(iconURLString: track.artworkUrl100, artistName: track.artistName, trackName: track.trackName, collectionName: track.collectionName ?? "", previewUrl: track.previewUrl)
     }
     
 }

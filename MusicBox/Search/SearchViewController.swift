@@ -51,7 +51,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     }
     
     private func setupTableView() {
-        //table.register(UITableViewCell.self, forCellReuseIdentifier: "CellID")
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "CellID")
         
         let nib = UINib(nibName: "TrackCell", bundle: nil)
         table.register(nib, forCellReuseIdentifier: TrackCell.reuseID)
@@ -86,17 +86,17 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TrackCell.reuseID, for: indexPath) as! TrackCell
+        let cell = table.dequeueReusableCell(withIdentifier: TrackCell.reuseID, for: indexPath) as! TrackCell
         
         let cellViewModel = self.searchViewModel.cells[indexPath.row]
-        print("cellViewModel.previewUrl:", cellViewModel.previewUrl)
         cell.trackImageView.backgroundColor = .systemBlue
+        cell.set(viewModel: cellViewModel)
 
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        84
+        return 84
     }
 }
 
