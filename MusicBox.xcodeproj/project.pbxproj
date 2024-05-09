@@ -10,6 +10,8 @@
 		5B0286AB604D030FEF43EFDE /* Pods_MusicBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA429DDA9AA6FE33E14931E /* Pods_MusicBox.framework */; };
 		AC1866882BE0043C00F3F48F /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC1866872BE0043C00F3F48F /* TrackCell.xib */; };
 		AC18668A2BE0050E00F3F48F /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1866892BE0050E00F3F48F /* TrackCell.swift */; };
+		AC2388682BED1C8C001F567F /* TrackDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2388672BED1C8C001F567F /* TrackDetailView.xib */; };
+		AC23886A2BED1CD5001F567F /* TrackDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2388692BED1CD5001F567F /* TrackDetailView.swift */; };
 		AC52DC782BD5AADA00E0030F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52DC772BD5AADA00E0030F /* NetworkService.swift */; };
 		AC671A222BBDBF22001E2F88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC671A212BBDBF22001E2F88 /* AppDelegate.swift */; };
 		AC671A242BBDBF22001E2F88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC671A232BBDBF22001E2F88 /* SceneDelegate.swift */; };
@@ -37,6 +39,8 @@
 		24D9E9A52A4AEAB326B613EC /* Pods-MusicBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicBox.debug.xcconfig"; path = "Target Support Files/Pods-MusicBox/Pods-MusicBox.debug.xcconfig"; sourceTree = "<group>"; };
 		AC1866872BE0043C00F3F48F /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		AC1866892BE0050E00F3F48F /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		AC2388672BED1C8C001F567F /* TrackDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackDetailView.xib; sourceTree = "<group>"; };
+		AC2388692BED1CD5001F567F /* TrackDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailView.swift; sourceTree = "<group>"; };
 		AC52DC772BD5AADA00E0030F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		AC671A1E2BBDBF22001E2F88 /* MusicBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC671A212BBDBF22001E2F88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		AC2388662BED1C55001F567F /* TrackDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				AC2388672BED1C8C001F567F /* TrackDetailView.xib */,
+				AC2388692BED1CD5001F567F /* TrackDetailView.swift */,
+			);
+			path = TrackDetailView;
+			sourceTree = "<group>";
+		};
 		AC671A152BBDBF22001E2F88 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +160,7 @@
 		AC86B40E2BD6CB7F009F5886 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				AC2388662BED1C55001F567F /* TrackDetailView */,
 				ACC6C0962BEBECBE00EC8013 /* FooterView */,
 				AC1866862BE0041A00F3F48F /* Cell */,
 				AC86B41D2BD813F5009F5886 /* SearchViewController.storyboard */,
@@ -237,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC671A2B2BBDBF23001E2F88 /* Assets.xcassets in Resources */,
+				AC2388682BED1C8C001F567F /* TrackDetailView.xib in Resources */,
 				AC1866882BE0043C00F3F48F /* TrackCell.xib in Resources */,
 				AC671A2E2BBDBF23001E2F88 /* Base in Resources */,
 				AC671A292BBDBF22001E2F88 /* Base in Resources */,
@@ -308,6 +323,7 @@
 				AC671A222BBDBF22001E2F88 /* AppDelegate.swift in Sources */,
 				AC671A362BBDC01B001E2F88 /* MainTabBarController.swift in Sources */,
 				AC671A242BBDBF22001E2F88 /* SceneDelegate.swift in Sources */,
+				AC23886A2BED1CD5001F567F /* TrackDetailView.swift in Sources */,
 				AC89D2C32BD30CA600E93075 /* SearchResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
