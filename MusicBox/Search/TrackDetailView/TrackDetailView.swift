@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class TrackDetailView: UIView {
     
@@ -23,6 +24,16 @@ class TrackDetailView: UIView {
         super.awakeFromNib()
         
         trackImageView.backgroundColor = .red
+    }
+    
+    func set(viewModel: SearchViewModel.Cell) {
+        trackTitleLabel.text = viewModel.trackName
+        authorTitleLabel.text = viewModel.artistName
+        
+        let stringImageURL600 = viewModel.iconURLString?.replacingOccurrences(of: "100x100", with: "600x600")
+        guard let url = URL(string: stringImageURL600 ?? "") else { return }
+        
+        trackImageView.sd_setImage(with: url, completed: nil)
     }
     
     @IBAction func handleCurrentTimeSlider(_ sender: Any) {
