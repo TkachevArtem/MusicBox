@@ -34,6 +34,7 @@ class TrackDetailView: UIView {
         trackImageView.layer.cornerRadius = 5
         
         monitorStartTime()
+        observePlayerCurrentTime()
     }
     
     
@@ -62,6 +63,19 @@ class TrackDetailView: UIView {
         let times = [NSValue(time: time)]
         player.addBoundaryTimeObserver(forTimes: times, queue: .main) { [weak self] in
             self?.enlargeTrackImageView()
+        }
+    }
+    
+    private func observePlayerCurrentTime() {
+        
+        let interval = CMTimeMake(value: 1, timescale: 2)
+        player.addPeriodicTimeObserver(forInterval: interval, queue: .main) { [weak self] (time) in
+            
+            self?.currentTimeLabel.text = time.toDisplayString()
+            
+            let durationTime = self?.player.currentItem?.duration
+            let currentDurationString = ((durationTime ?? CMTimeMake(value: 1, timescale: 1)) - time).toDisplayString()
+            self?.durationLabel.text = "-\(currentDurationString)"
         }
     }
     
